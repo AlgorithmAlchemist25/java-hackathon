@@ -1,0 +1,36 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+body {
+  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+}
+h2 {
+  text-align: center;
+  color: #dc3545;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

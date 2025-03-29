@@ -1,0 +1,36 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
+}
+
+h1 {
+  font-size: 4.0rem;
+  color: #0044ff;
+}
+.statement{
+  font-size: 2.5rem;
+  color: #00d5ff;
+}
+.buttons-container {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.home-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}

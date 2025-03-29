@@ -1,0 +1,38 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+body {
+  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+}
+
+.login-heading {
+  text-align: center;
+  color: #1e90ff; /* Bright Blue color */
+  font-size: 36px; /* Font size set to 24px */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

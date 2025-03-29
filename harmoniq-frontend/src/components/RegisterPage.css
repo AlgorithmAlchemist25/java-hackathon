@@ -1,0 +1,38 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+body {
+  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+}
+.Register{
+  text-align: center;
+  font-size:4.0rem;
+  color: #28a745;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit{
+  padding: 20px;
+  background-color: #3f28a7;
+  color: white;
+  font-size:1.0rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
