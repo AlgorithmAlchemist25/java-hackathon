@@ -19,5 +19,5 @@ public class Concert {
 
     @ManyToOne
     @JoinColumn(name = "organizer_id")
-    private User organizer;
+    private User Organizer;
 }

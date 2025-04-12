@@ -16,14 +16,12 @@ function LoginPage() {
         password,
       });
       console.log('Login successful:', response.data);
-
+      localStorage.setItem('role', response.data.role);
       // Check the role and navigate accordingly
       if (response.data.role === 'ORGANIZER') {
         // This is where the navigation should happen if role is "ORGANIZER"
         navigate('/organizer-dashboard');
-      } else if(response.data.role === 'Organizer'){
-        navigate('/organizer-dashboard')
-      } else{
+      }else{
         alert('Only organizers can access this page');
       }
     } catch (error) {
