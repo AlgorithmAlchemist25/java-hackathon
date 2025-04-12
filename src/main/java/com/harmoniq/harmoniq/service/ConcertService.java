@@ -22,4 +22,3 @@ public class ConcertService {
         return concertRepository.findByOrganizer(organizer);
     }
 }
-
