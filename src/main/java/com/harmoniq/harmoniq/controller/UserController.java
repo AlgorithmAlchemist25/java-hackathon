@@ -35,7 +35,7 @@ public class UserController {
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
 
         if (existingUser.isPresent() && existingUser.get().getPassword().equals(user.getPassword())) {
-            return ResponseEntity.ok("Login successful");
+            return ResponseEntity.ok(existingUser.get());
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
         }

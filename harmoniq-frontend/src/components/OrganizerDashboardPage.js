@@ -4,7 +4,7 @@ import './OrganizerDashboardPage.css';
 
 function OrganizerDashboardPage() {
   const [concertData, setConcertData] = useState({
-    organizer_id: '',
+    organizer_id: localStorage.getItem('userId') || '',
     title: '',
     description: '',
     date: '',
@@ -45,7 +45,8 @@ function OrganizerDashboardPage() {
         placeholder="Organizer Id"
         value = {concertData.organizer_id}
         onChange = {handleChange}
-        required/>
+        required
+        readOnly/>
         <input
           type="text"
           name="title"
