@@ -4,7 +4,7 @@ import './OrganizerDashboardPage.css';
 
 function OrganizerDashboardPage() {
   const [concertData, setConcertData] = useState({
-    organizer_id: localStorage.getItem('userId') || '',
+    organizer: { id: localStorage.getItem('userId') || '' },
     title: '',
     description: '',
     date: '',
@@ -12,8 +12,16 @@ function OrganizerDashboardPage() {
   });
 
   const handleChange = (e) => {
-    setConcertData({ ...concertData, [e.target.name]: e.target.value });
+    if (e.target.name === 'organizer_id') {
+      setConcertData({
+        ...concertData,
+        organizer: { id: e.target.value }
+      });
+    } else {
+      setConcertData({ ...concertData, [e.target.name]: e.target.value });
+    }
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,7 +51,7 @@ function OrganizerDashboardPage() {
         type = "number"
         name = "organizer_id"
         placeholder="Organizer Id"
-        value = {concertData.organizer_id}
+        value = {concertData.organizer.id}
         onChange = {handleChange}
         required
         readOnly/>
