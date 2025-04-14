@@ -27,29 +27,29 @@ public class ConcertController {
 
     // POST method to create a new concert
     @PostMapping("/create")
-public ResponseEntity<?> createConcert(@RequestBody Concert concert) {
-    Long organizerId = concert.getOrganizer() != null ? concert.getOrganizer().getId() : null;
+    public ResponseEntity<?> createConcert(@RequestParam Long organizer_id, @RequestBody Concert concert) {
+        // Check if the organizer exists
+        Optional<User> userOptional = userRepository.findById(organizer_id);
+        if (userOptional.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found.");
+        }
 
-    if (organizerId == null) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Organizer ID is missing.");
+        User user = userOptional.get();
+
+        // Check if the user is an organizer
+        if (user.getRole() != Role.ORGANIZER) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Only organizers can create concerts.");
+        }
+
+        // Set the organizer for the concert
+        concert.setOrganizer(user);
+
+        // Save the concert
+        Concert savedConcert = concertService.createConcert(concert);
+
+        // Return the created concert with HTTP status 200 OK
+        return ResponseEntity.ok(savedConcert);
     }
-
-    Optional<User> userOptional = userRepository.findById(organizerId);
-    if (userOptional.isEmpty()) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found.");
-    }
-
-    User user = userOptional.get();
-
-    if (user.getRole() != Role.ORGANIZER) {
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Only organizers can create concerts.");
-    }
-
-    concert.setOrganizer(user);
-    Concert savedConcert = concertService.createConcert(concert);
-    return ResponseEntity.ok(savedConcert);
-}
-
 
     // GET method to retrieve concerts by the organizer
     @GetMapping("/by-organizer/{id}")

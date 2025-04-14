@@ -9,8 +9,9 @@ public class CorsConfig {
     @Bean
     WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
+            @SuppressWarnings("null")
             @Override
-            public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
+            public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:3000") // Allow frontend to call backend
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
