@@ -1,38 +1,76 @@
-.container {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 50px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
 body {
-  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
-  height: 100vh; /* Full height of the viewport */
-  margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+  background: linear-gradient(to right, #8a2be2, #ff007f);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Irish Grover', cursive;
+  overflow: hidden;
 }
-.Register{
+
+/* Top row with logo and title */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15px;
+  gap: 10px;
+}
+.logo {
+  height: 100px;
+  width: 101px;
+}
+
+/* Register heading */
+.Register {
+  font-size: 128px;
+  color: white;
   text-align: center;
-  font-size:4.0rem;
-  color: #28a745;
+  font-family: 'Irish Grover', cursive;
+  margin: 0 auto;
+}
+
+/* Big form box */
+.container {
+  width: 600px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 input, select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.submit{
-  padding: 20px;
-  background-color: #3f28a7;
-  color: white;
-  font-size:1.0rem;
+  padding: 16px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: 'Irish Grover', cursive;
+}
+
+.submit {
+  padding: 18px;
+  background-color: red;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Irish Grover', cursive;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
 }

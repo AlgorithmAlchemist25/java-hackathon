@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './LoginPage.css';
+import logo from '../images/logo.png'; // Make sure the path is correct
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -17,12 +18,11 @@ function LoginPage() {
       });
       console.log('Login successful:', response.data);
       const user = response.data;
-      localStorage.setItem('userId',user.id);
-      localStorage.setItem('userRole',user.role);
+      localStorage.setItem('userId', user.id);
+      localStorage.setItem('userRole', user.role);
       if (user.role === 'ORGANIZER') {
-        // This is where the navigation should happen if role is "ORGANIZER"
         navigate('/organizer-dashboard');
-      }else{
+      } else {
         alert('Only organizers can access this page');
       }
     } catch (error) {
@@ -32,25 +32,30 @@ function LoginPage() {
   };
 
   return (
-    <div className="container">
-     <h2 className="login-heading">Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit" className="login-button">Login</button>
-      </form>
+    <div className="login-page">
+      <div className="logo-container">
+        <img src={logo} alt="Logo" className="logo" />
+      </div>
+      <h2 className="login-heading">LOGIN</h2>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email Id"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="login-button">LOGIN</button>
+        </form>
+      </div>
     </div>
   );
 }

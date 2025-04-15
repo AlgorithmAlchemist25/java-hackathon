@@ -1,36 +1,122 @@
-.container {
-  max-width: 500px;
-  margin: auto;
-  margin-top: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body {
-  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
-  height: 100vh; /* Full height of the viewport */
-  margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+
+body,
+html {
+  height: 100%;
+  font-family: 'Irish Grover', cursive;
+  background: linear-gradient(to bottom, #ff4fac, #7b2ff7);
+  overflow: hidden; /* Prevent scrolling */
 }
-h2 {
+
+.organizer-dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+}
+
+/* Logo */
+.logo-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.logo {
+  width: 100px;
+  height: 101px;
+}
+
+/* Title */
+.dashboard-heading {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
   text-align: center;
-  color: #dc3545;
+}
+
+/* Form box */
+.form-container {
+  background: linear-gradient(to right, #fbc2eb, #a18cd1);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: rgba(128, 0, 128, 0.2);
+  font-family: 'Irish Grover', cursive;
+  color: black;
 }
 
-button {
-  padding: 10px;
-  background-color: #dc3545;
+textarea {
+  resize: none;
+  min-height: 60px;
+}
+
+/* Button */
+.create-button {
+  width: 100%;
+  padding: 12px;
+  background-color: red;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-size: 22px;
+  margin-top: 10px;
   cursor: pointer;
+  font-family: 'Irish Grover', cursive;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: darkred;
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-height: 700px) {
+  .dashboard-heading {
+    font-size: 28px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .create-button {
+    font-size: 18px;
+    padding: 10px;
+  }
 }

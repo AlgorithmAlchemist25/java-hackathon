@@ -1,38 +1,83 @@
-.container {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-  background: linear-gradient(to right, #8a2be2, #ff007f); /* Electric Purple to Hot Pink */
-  height: 100vh; /* Full height of the viewport */
-  margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Optional: Set a default font for your page */
+  background: linear-gradient(to top, #7b2ff7, #f107a3);
+  font-family: 'Irish Grover', cursive;
+  height: 100vh;
 }
 
-.login-heading {
-  text-align: center;
-  color: #1e90ff; /* Bright Blue color */
-  font-size: 36px; /* Font size set to 24px */
-}
-
-form {
+.login-page {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  position: relative;
 }
 
+/* Logo top left */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 101px;
+}
+
+/* Heading */
+.login-heading {
+  font-size: 128px;
+  color: white;
+  text-align: center;
+  font-family: 'Irish Grover', cursive;
+  margin-bottom: 40px;
+}
+
+/* Centered login form box */
+.container {
+  background-color: rgba(255, 192, 203, 0.8); /* soft pink */
+  padding: 50px;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Inputs */
 input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 20px 0;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: rgba(128, 0, 128, 0.2); /* light purple tint */
 }
 
+/* Button */
 .login-button {
-  padding: 10px;
-  background-color: #007bff;
+  width: 100%;
+  padding: 18px;
+  background-color: red;
   color: white;
   border: none;
-  border-radius: 5px;
+  font-size: 28px;
+  font-family: 'Irish Grover', cursive;
+  border-radius: 40px;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
 }
