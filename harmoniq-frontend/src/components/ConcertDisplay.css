@@ -1,40 +1,45 @@
 /* Background & general layout */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 .dashboard-container {
     background: linear-gradient(to bottom, #ff1493, #8a2be2); /* Electric pink to purple */
     min-height: 100vh;
     padding: 20px;
-    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-family: "Irish Grover", system-ui;
     color: white;
   }
   
   /* Header styles */
-  .dashboard-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    gap: 10px;
-  }
-  
   .dashboard-logo {
     width: 50px;
     height: 50px;
-    border-radius: 10px;
-  }
-  
-  .dashboard-title {
+    border-radius: 1px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Header styles */
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 4px #000000aa;
-  }
+}
+
   
   /* Cards container */
   .concert-sections {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
   }
   
   /* Individual concert card */
