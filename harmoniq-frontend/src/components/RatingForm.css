@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Irish Grover', cursive;
+  }
+  
+  .rating-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #ff40b0 0%, #7000a3 100%);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 101px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .rating-title {
+    color: white;
+    font-size: 48px;
+    font-family: 'Irish Grover', cursive;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .form-content {
+    background-color: rgba(255, 192, 233, 0.6);
+    width: 80%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    background-color: rgba(209, 129, 186, 0.6);
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Irish Grover', cursive;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+  }
+  
+  .submit-btn {
+    background-color: #ff0000;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Irish Grover', cursive;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }

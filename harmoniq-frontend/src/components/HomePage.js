@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
-import logo from '../images/logo.png'; // Ensure this is the correct path to your logo
+import logo from '../images/image 5.png'; // Ensure this is the correct path to your logo
 
 function HomePage() {
   const navigate = useNavigate();
@@ -32,3 +32,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

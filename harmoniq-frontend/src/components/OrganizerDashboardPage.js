@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './OrganizerDashboardPage.css';
-import logo from '../images/logo.png'; // Update path if different
+import logo from '../images/image 5.png'; // Update path if different
 
 function OrganizerDashboardPage() {
   const [concertData, setConcertData] = useState({

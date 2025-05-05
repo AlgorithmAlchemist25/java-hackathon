@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './RegisterPage.css';
-import logo from '../images/logo.png'; // adjust the path as needed
+import logo from '../images/image 5.png'; // adjust the path as needed
 
 function RegisterPage() {
   const [formData, setFormData] = useState({

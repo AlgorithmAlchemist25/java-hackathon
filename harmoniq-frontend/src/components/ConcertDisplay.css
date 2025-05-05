@@ -1,0 +1,104 @@
+/* Ensure body allows scroll */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container */
+.dashboard-container {
+  background: linear-gradient(to bottom, #ff66cc, #9933ff);
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.dashboard-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-family: 'Irish Grover','cursive';
+}
+
+/* Logo aligned to the left */
+.dashboard-logo {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  height: 100px;
+  width: 101px;
+}
+
+/* Title centered */
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto;
+}
+
+/* Concert section (scrolls when items overflow) */
+.concert-sections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+/* Individual concert card */
+.concert-card {
+  background-color: pink;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.concert-card:hover{
+  background-color: pink;
+}
+
+/* Image inside concert card */
+.concert-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Concert details section */
+.concert-details {
+  background-color: #f5c6e7;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* Book now button */
+.book-button {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: 'Irish Grover','cursive';
+  transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #cc0000;
+}

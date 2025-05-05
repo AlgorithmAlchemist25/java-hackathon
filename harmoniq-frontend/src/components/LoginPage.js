@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './LoginPage.css';
-import logo from '../images/logo.png'; // Make sure the path is correct
+import logo from '../images/image 5.png'; // Make sure the path is correct
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -23,7 +23,7 @@ function LoginPage() {
       if (user.role === 'ORGANIZER') {
         navigate('/organizer-dashboard');
       } else {
-        alert('Only organizers can access this page');
+        navigate('/attendee-dashboard');
       }
     } catch (error) {
       console.error('Error logging in:', error.response ? error.response.data : error.message);
